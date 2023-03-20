@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f7f7f7;
+    .header {
+        margin-top: 15px;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header_logo {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+        }
+        .header_about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 360px;
+            height: 50px;
+            .header_p {
+                @include main_type;
+                @include button_header_off;
+            }
+        }
+    }
+}
+
+
+.header_link {
+    text-decoration: none;
+}
+.radio_header {
+    appearance: none;
+}

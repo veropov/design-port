@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Jost", sans-serif;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.bold_p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f7f7f7;
+}
+.container .header {
+  margin-top: 15px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .header_logo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+}
+.container .header .header_about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  height: 50px;
+}
+.container .header .header_about .header_p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background-color: rgba(127, 118, 231, 0.05);
+}
+
+.header_link {
+  text-decoration: none;
+}
+
+.radio_header {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.main {
+  margin-top: 70px;
+  width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main .title_main {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+  margin-bottom: 25px;
+}
+.main .container_main-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 25px;
+}
+.main .container_main-1 .about_me {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 25px;
+}
+.main .container_main-1 .about_me .person_main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 30px;
+  gap: 25px;
+  width: 532px;
+  height: 561px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+.main .container_main-1 .about_me .info_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  width: 643px;
+  height: 560px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+.main .container_main-1 .about_me .info_main .container_info-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+}
+.main .container_main-1 .about_me .info_main .container_info-1 .info_p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.container_info-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px;
+}
+.container_info-2 .container_info-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px;
+}
+.container_info-2 .container_info-3 .container_info-dsgn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 584px;
+  height: 26px;
+}
+.container_info-2 .container_info-3 .container_info-dsgn-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 584px;
+}
+.container_info-2 .container_info-3 .container_info-attr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(127, 118, 231, 0.05);
+  border-radius: 16px;
+  width: 584px;
+}
+.container_info-2 .container_info-3 .container_info-attr .info_p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: blue;
+}
+
+.portfolio_main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 10px;
+  width: 1200px;
+  height: 517px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+
+.container_person-inf {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px;
+}
+
+.container_person-job {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px;
+}
+
+.photo {
+  width: 275px;
+  height: 281px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.img_person {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto;
+  height: 250%;
+  margin-left: -115px;
+  margin-top: -120px;
+}
+
+.container_person-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px;
+}
+.container_person-2 .content_person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 10px;
+  background: rgba(127, 118, 231, 0.05);
+  border-radius: 8px;
+  width: 275px;
+  height: 40px;
+}
+.container_person-2 .content_person p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 10px;
+  border-radius: 16px;
+  width: 172px;
+  height: 115px;
+  background: rgba(127, 118, 231, 0.05);
+}
+.job .job_img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+.job .job_type {
+  font-weight: 500;
+  font-size: 14px;
+}
+.job .job_p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+}
+.job .job_p .jop_p_bold {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+}
+.job .job_p .jop_p_light {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.prog {
+  display: flex;
+  justify-content: space-between;
+}
