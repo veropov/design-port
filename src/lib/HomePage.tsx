@@ -1,5 +1,5 @@
 import '../style/main.css';
-import { ClassArea } from '../components/job area/job-area';
+import { ClassArea } from '../components/area/job area/job-area';
 
 import Avatar from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg';
 import FunSun from '../style/assets/fun sun.svg';

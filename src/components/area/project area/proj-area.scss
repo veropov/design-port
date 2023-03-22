@@ -1,0 +1,41 @@
+.proj_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 15px;
+    width: 590px;
+    height: 454px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    .proj_cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 10px;
+        
+        width: 530px;
+        height: 113px;
+        background: $back1;
+        border-radius: 16px;
+        .title_proj {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+        }
+        .subTitle_proj {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+    }
+}
+
+
