@@ -1,3 +1,11 @@
+.portfolio_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+
 .proj_area {
     display: flex;
     flex-direction: column;
@@ -5,10 +13,11 @@
     align-items: center;
     padding: 30px;
     gap: 15px;
-    width: 590px;
-    height: 454px;
     background: #FFFFFF;
     border-radius: 16px;
+    img {
+        width: 530px;
+    }
     .proj_cont {
         display: flex;
         flex-direction: column;
@@ -16,7 +25,6 @@
         align-items: flex-start;
         padding: 15px;
         gap: 10px;
-        
         width: 530px;
         height: 113px;
         background: $back1;

@@ -36,7 +36,9 @@ $typo_color: #333333;
     background-color: $back1;
 }
 
-@import './header.scss';
 @import './index.scss';
-@import '../src/components/job area/job-area.scss';
-@import '../src/components/area/project area/proj-area.scss';
+@import './header.scss';
+@import './job-area.scss';
+@import './info-area.scss';
+@import './proj-area.scss';
+@import './banner.scss';

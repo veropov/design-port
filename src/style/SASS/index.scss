@@ -1,4 +1,3 @@
-
 .main {
     margin-top: 70px;
     width: 1200px;
@@ -115,19 +114,6 @@
     color: blue;
 }
 
-.portfolio_main {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 30px;
-    gap: 10px;
-    width: 1200px;
-    height: 517px;
-    background: #FFFFFF;
-    border-radius: 16px;
-
-}
-
 .container_person-inf {
     display: flex;
     flex-direction: column;
@@ -160,25 +146,4 @@
     height: 250%;
     margin-left: -115px;
     margin-top: -120px;
-}
-.container_person-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 15px;
-    .content_person {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px 20px;
-        gap: 10px;
-        background: $back1;
-        border-radius: 8px;
-        width: 275px;
-        height: 40px;
-        p {
-            @include main_type;
-        }
-    }
 }

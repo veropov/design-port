@@ -1,166 +1,50 @@
-import React from 'react';
+export class Button {
+    title?: String;
+    link?: String;
+    width?: boolean;
 
-export type ButtonProps = {
+    constructor(title: String, link: String, width: boolean) {
+        this.title = title;
+        this.link = link;
+        this.width = width;
+    }
 
-    /**
-     * Текст кнопки
-     */
-    text?: React.ReactNode;
+    //Обычная ширина кнопки
+    widthDefault = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '20px 36px',
+        background: '#6C82F3',
+        borderRadius: '16px'
+    }
 
-    /**
-     * Иконка кнопки
-     */
-    icon?: React.ReactNode;
+    //Ширина кнопки зависит от родителя
+    widthInherit = {
+        display: 'inline-block',
+        alignItems: 'center',
+        background: '#6C82F3',
+        borderRadius: '16px'
+    }
 
-    /**
-     * Список произвольных элементов в левом слоте
-     */
-    rightAddons?: React.ReactNode;
+    p = {
+        fontWeight: '700',
+        fontSize: '16px',
+        color: 'white'
+    }
 
-    /**
-     * Список произвольных элементов в правом слоте
-     */
-    leftAddons?: React.ReactNode;
+    a = {
+        textDecoration: 'none'
+    }
 
-    /**
-     * Тип кнопки
-     * @default 'default'
-     */
-    view?: 'default' | 'action' | 'extra' | 'rounded';
-
-    /**
-     * Поведение кнопки
-     */
-    type?: 'button' | 'reset' | 'submit';
-
-    /**
-     * HTML элемент, которым будет компонент в DOM
-     */
-    tag?: 'button' | 'span';
-
-    /**
-     * Управление шириной кнопки. При значении 'available' растягивает кнопку на ширину родителя
-     */
-    width?: 'default' | 'available';
-
-    /**
-     * Размер компонента
-     */
-    size?: 's' | 'm' | 'l' | 'xl';
-
-    /**
-     * Управление возможности взаимодействия с компонентом
-     */
-    disabled?: boolean;
-
-    /**
-     * Отображение кнопки в состоянии фокуса
-     */
-    focused?: boolean;
-
-    /**
-     * Псевдо представление кнопки
-     */
-    pseudo?: boolean;
-
-    /**
-     * Идентификатор компонента в DOM
-     */
-    id?: string;
-
-    /**
-     * Отключает валидацию полей формы, у которых есть атрибут pattern
-     */
-    formNoValidate?: boolean;
-
-    /**
-     * Имя компонента в DOM
-     */
-    name?: string;
-
-    /**
-     * Текст всплывающей подсказки
-     */
-    title?: string;
-
-    /**
-     * Последовательность перехода между контролами при нажатии на Tab
-     */
-    tabIndex?: number;
-
-    /**
-     * Тип переключателя
-     */
-    togglable?: 'check' | 'radio';
-
-    /**
-     * Отображение кнопки в отмеченном (зажатом) состоянии
-     */
-    checked?: boolean;
-
-    /**
-     * Дочерние элементы `Button`
-     */
-    children?: React.ReactNode;
-
-    /**
-     * Идентификатор для систем автоматизированного тестирования
-     */
-    'data-test-id'?: string;
-
-    /**
-     * Дополнительный класс
-     */
-    className?: string;
-
-    /**
-     * Обработчик клика по кнопке
-     */
-    onClick?: (event?: React.MouseEvent<any>) => void;
-
-    /**
-     * Обработчик фокуса кнопки
-     */
-    onFocus?: (event?: React.FocusEvent<any>) => void;
-
-    /**
-     * Обработчик снятия фокуса кнопки
-     */
-    onBlur?: (event?: React.FocusEvent<any>) => void;
-
-    /**
-     * Обработчик события наведения курсора на кнопку
-     */
-    onMouseEnter?: (event?: React.MouseEvent<any>) => void;
-
-    /**
-     * Обработчик события снятия курсора с кнопки
-     */
-    onMouseLeave?: (event?: React.MouseEvent<any>) => void;
-
-    /**
-     * Обработчик события нажатия кнопки мыши в момент
-     */
-    onMouseDown?: (event?: React.MouseEvent<any>) => void;
-
-    /**
-     * Обработчик события отжатия кнопки мыши в момент
-     */
-    onMouseUp?: (event?: React.MouseEvent<any>) => void;
-
-    /**
-     * Обработчик события отведения курсора с кнопки
-     */
-    onMouseOut?: (event?: React.MouseEvent<any>) => void;
-
-    /**
-     * Обработчик события нажатия на клавишу клавиатуры в момент, когда фокус находится на компоненте
-     */
-    onKeyDown?: (event?: React.KeyboardEvent<any>) => void;
-
-    /**
-     * Обработчик события отжатия на клавишу клавиатуры в момент, когда фокус находится на компоненте
-     */
-    onKeyUp?: (event?: React.KeyboardEvent<any>) => void;
-
-};
+    Button() {
+        return (
+            <a href={`${this.link}`} style={this.a}>
+                <div style={this.width == true ? this.widthDefault : this.widthInherit}>
+                    <p style={this.p}>{this.title}</p>
+                
+                </div>
+            </a>
+        )
+    }
+}
