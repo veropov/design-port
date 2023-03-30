@@ -1,19 +1,37 @@
 .container_banner {
-  background: radial-gradient(74.08% 1695.93% at 12.04% 80.92%, rgba(175, 193, 255, 0.03) 0%, rgba(120, 14, 255, 0.03) 100%), linear-gradient(86.99deg, rgba(186, 197, 255, 0.15) 0.2%, rgba(239, 205, 255, 0.15) 99.48%);
+  background: radial-gradient(74.08% 1695.93% at 12.04% 80.92%, rgba(175, 193, 255, 0.2) 0%, rgba(112, 0, 255, 0.2) 100%), linear-gradient(86.99deg, #BAC5FF 0.2%, #EFCDFF 99.48%);
   border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  overflow: hidden;
+  z-index: 1;
 }
 .container_banner img {
-  height: 249px;
-  border-bottom-right-radius: 16px;
+  max-width: 1620px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transform: translate(-250px, -404px);
 }
 .container_banner .frame_banner {
+  max-width: 1220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
   padding: 30px;
   gap: 25px;
+  z-index: 10;
+}
+.container_banner .frame_banner p {
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 110%;
+  text-align: center;
 }

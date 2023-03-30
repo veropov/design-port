@@ -13,10 +13,11 @@
 }
 
 .main {
-  margin-top: 70px;
+  margin-top: 110px;
   width: 1200px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 .main .title_main {
@@ -29,7 +30,8 @@
 .main .container_main-1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 0px;
   gap: 25px;
 }
@@ -169,31 +171,30 @@
   background: #f7f7f7;
 }
 .container .header {
-  margin-top: 15px;
-  width: 1200px;
+  z-index: 15;
+  position: fixed;
+  top: 0%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-.container .header .header_logo {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  padding: 10px;
 }
 .container .header .header_about {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 360px;
-  height: 50px;
+  width: 460px;
 }
-.container .header .header_about .header_p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  padding: 8px 20px;
-  border-radius: 8px;
-  background-color: rgba(127, 118, 231, 0.05);
+.container .header .header_about .header_cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .header_link {
@@ -204,6 +205,53 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.header_home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
+  background: rgba(127, 118, 231, 0.2);
+  border-radius: 16px;
+}
+
+.header_ux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
+}
+
+.header_ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
+}
+
+.header_code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
+}
+
+.header_contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
 }
 
 .job {
@@ -284,7 +332,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
-  gap: 15px;
+  gap: 20px;
   background: #FFFFFF;
   border-radius: 16px;
 }
@@ -294,13 +342,10 @@
 .proj_area .proj_cont {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding: 15px;
-  gap: 10px;
+  gap: 15px;
   width: 530px;
-  height: 113px;
-  background: rgba(127, 118, 231, 0.05);
   border-radius: 16px;
 }
 .proj_area .proj_cont .title_proj {
@@ -319,21 +364,39 @@
 }
 
 .container_banner {
-  background: radial-gradient(74.08% 1695.93% at 12.04% 80.92%, rgba(175, 193, 255, 0.03) 0%, rgba(120, 14, 255, 0.03) 100%), linear-gradient(86.99deg, rgba(186, 197, 255, 0.15) 0.2%, rgba(239, 205, 255, 0.15) 99.48%);
+  background: radial-gradient(74.08% 1695.93% at 12.04% 80.92%, rgba(175, 193, 255, 0.2) 0%, rgba(112, 0, 255, 0.2) 100%), linear-gradient(86.99deg, #BAC5FF 0.2%, #EFCDFF 99.48%);
   border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  overflow: hidden;
+  z-index: 1;
 }
 .container_banner img {
-  height: 249px;
-  border-bottom-right-radius: 16px;
+  max-width: 1620px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transform: translate(-250px, -404px);
 }
 .container_banner .frame_banner {
+  max-width: 1220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
   padding: 30px;
   gap: 25px;
+  z-index: 10;
+}
+.container_banner .frame_banner p {
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 110%;
+  text-align: center;
 }

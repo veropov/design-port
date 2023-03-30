@@ -14,22 +14,22 @@ export class Button {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '20px 36px',
-        background: '#6C82F3',
-        borderRadius: '16px'
+        padding: '22px 36px',
+        background: '#5C59FF',
+        borderRadius: '99px'
     }
 
     //Ширина кнопки зависит от родителя
     widthInherit = {
         display: 'inline-block',
         alignItems: 'center',
-        background: '#6C82F3',
+        background: '#5552FF',
         borderRadius: '16px'
     }
 
     p = {
         fontWeight: '700',
-        fontSize: '16px',
+        fontSize: '18px',
         color: 'white'
     }
 

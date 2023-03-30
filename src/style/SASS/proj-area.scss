@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
-    gap: 15px;
+    gap: 20px;
     background: #FFFFFF;
     border-radius: 16px;
     img {
@@ -21,13 +21,10 @@
     .proj_cont {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
-        padding: 15px;
-        gap: 10px;
+        gap: 15px;
         width: 530px;
-        height: 113px;
-        background: $back1;
         border-radius: 16px;
         .title_proj {
             font-family: 'Jost';

@@ -1,7 +1,7 @@
 import '../style/main.css';
 import { ClassArea } from '../components/area/job area/job-area';
 import { InArea } from '../components/area/info area/info-area';
-import {Button} from '../components/button/button';
+import  Header from '../header';
 import { Banner } from '../components/banner/banner';
 
 import Avatar from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg';
@@ -18,6 +18,7 @@ import Js from '../style/assets/js.svg';
 import Flutter from '../style/assets/flutter.svg';
 import Comm from '../style/assets/img/commer.jpg';
 import BannerImg from '../style/assets/img/mask.png';
+
 
 import Work from '../style/assets/icons/Work.svg';
 import Profile from '../style/assets/icons/Profile.svg';
@@ -123,14 +124,7 @@ const banner = new Banner(
 
     return (
         <div className="container">
-        <div className="header">
-            <a className="header_link" href=""><p className="header_logo">v.eropov</p></a>
-            <div className="header_about">
-                <a className="header_link" href=""><p className="header_p"><input name="about" className="radio_header" type="radio" value="about_me" checked/>Обо мне</p></a>
-                <a className="header_link" href=""><p className="header_p"><input name="about" className="radio_header" type="radio" value="about_proj"/>Проекты</p></a>
-                <a className="header_link" href=""><p className="header_p"><input name="about" className="radio_header" type="radio" value="about_cont"/>Контакты</p></a>
-            </div>
-        </div>
+            <Header />
         <div className="main">
             <div className="container_main-1">
                 { banner.BannerDots() }
