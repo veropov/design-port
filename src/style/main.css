@@ -207,51 +207,36 @@
           appearance: none;
 }
 
-.header_home {
+.header_hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 50px;
-  background: rgba(127, 118, 231, 0.2);
   border-radius: 16px;
+  background: rgba(127, 118, 231, 0.05);
 }
 
-.header_ux {
+.header_active {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 50px;
+  border-radius: 16px;
+  background: rgba(127, 118, 231, 0.2);
 }
 
-.header_ui {
+.header_inactive {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 50px;
-}
-
-.header_code {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 50px;
-}
-
-.header_contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 50px;
+  border-radius: 16px;
 }
 
 .job {

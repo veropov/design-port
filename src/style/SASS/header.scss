@@ -33,55 +33,44 @@
 
 .header_link {
     text-decoration: none;
+    // &:hover .header_inactive{
+    //     background: $back1;
+    // }
 }
+
 .radio_header {
     appearance: none;
 }
 
-
-.header_home{
+.header_hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 50px;
-    background: $back2;
     border-radius: 16px;
+    background: $back1;
 }
 
-.header_ux{
+
+.header_active{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 50px;
+    border-radius: 16px;
+    background: $back2;
 }
 
-.header_ui{
+.header_inactive{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 50px;
-}
-
-.header_code{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 50px;
-}
-
-.header_contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 50px;
+    border-radius: 16px;
 }

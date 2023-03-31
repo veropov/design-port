@@ -16,7 +16,7 @@
   background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
-  padding: 6px;
+  padding: 10px;
 }
 .container .header .header_about {
   display: flex;
@@ -42,49 +42,22 @@
           appearance: none;
 }
 
-.header_home {
+.header_active {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 50px;
-  background: rgba(176, 92, 255, 0.1);
   border-radius: 16px;
 }
 
-.header_ux {
+.header_inactive {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 50px;
-}
-
-.header_ui {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 50px;
-}
-
-.header_code {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 50px;
-}
-
-.header_contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 50px;
+  border-radius: 16px;
 }

@@ -124,7 +124,7 @@ const banner = new Banner(
 
     return (
         <div className="container">
-            <Header />
+        <Header />
         <div className="main">
             <div className="container_main-1">
                 { banner.BannerDots() }
