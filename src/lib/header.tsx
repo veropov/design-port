@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import  Lottie from "lottie-react";
 import anHome from '../components/lottie/animation/anim_test.json';
 import trans from '../components/lottie/animation/trans.json';
@@ -19,7 +19,7 @@ function lottieHome() {
     )
 }
 
-//Хук на измненение элелементов хэдера внутри каждого контейнера <a>, 
+//Хук на измненение элементов хэдера внутри каждого контейнера, 
 //Map состоит из элементов навигации
 const [head, setHead] = useState({
     hover: null,
@@ -27,13 +27,24 @@ const [head, setHead] = useState({
     objects: [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]
 })
 
+//Выбор первого элемента из списка, если не выбран никакой
+function Clean() {
+    return setHead({...head, active: head.objects[0] as any})
+}
+
+//Эффект при загрузке или обновлении страницы
+useEffect(() => {
+    Clean()
+}, []);
+
+
 //Функция активации каждого элемента внутри Map head по индексу
 function toggleHeader(index: any) {
     return setHead({...head, active: head.objects[index] as any, hover: null})
  }
 
  //Функция активации каждого элемента внутри Map head по индексу
-function hoverHeader(index: any) {
+ function hoverHeader(index: any) {
     if (head.objects[index] === head.active) {
         return null
     }
@@ -50,10 +61,10 @@ function disToggleHeader() {
 function toggleHeaderHover(index: any) {
     if (head.objects[index] === head.active) {
         return backActive
-     }
+    }
     else if (head.objects[index] === head.hover) {
          return backHover
-     } 
+    } 
      else {
          return backInactive
      }
@@ -76,7 +87,6 @@ function titleHeaderHover(index: any) {
          return inActive
      }
  }
-
 
 let index = [
     0,
@@ -159,29 +169,27 @@ const imgHeader = [
 ]
 
 
-
-
     return (
         <div className="header">
             <div className="header_about">
                 {head.objects.map((elements, index) => (
-                    <div 
-                        className='header_cont'
-                        key={index} 
-                        onClick={() => toggleHeader(index)}
-                        onMouseEnter={() => hoverHeader(index)}
-                        onMouseLeave={() => disToggleHeader()}
-                    >
-                        <div className={toggleHeaderHover(index)}>
-                            <div className='svg_head'>
-                                {ImgHeader(index)}
+                        <div 
+                            className='header_cont'
+                            key={index} 
+                            onClick={() => toggleHeader(index)}
+                            onMouseEnter={() => hoverHeader(index)}
+                            onMouseLeave={() => disToggleHeader()}
+                        >
+                            <div className={toggleHeaderHover(index)}>
+                                <div className='svg_head'>
+                                    {ImgHeader(index)}
+                                </div>
+                                {lottieHeaderActive(index)}
                             </div>
-                            {lottieHeaderActive(index)}
+                            <p className="header_p">
+                                {titleHeader[index]}
+                            </p>
                         </div>
-                        <p className="header_p">
-                            {titleHeader[index]}
-                        </p>
-                    </div>
                 ))}
             </div>
         </div> 
@@ -189,3 +197,12 @@ const imgHeader = [
 }
 
 export default Header;
+
+{/* <input name="about" className="radio_header" type="radio" value={valueRadio[index]} checked={radioHeaderActive(index)}/> */}
+
+//  //Функция добавления лотти анимации
+// function radioHeaderActive(index: any) {
+//     if (head.objects[index] === head.active) {
+//         return true
+//     } else return false
+// }

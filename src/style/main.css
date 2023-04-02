@@ -177,7 +177,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #f7f7f7;
+  background: rgb(239, 239, 241);
 }
 .container .header {
   z-index: 15;
@@ -207,16 +207,6 @@
 }
 .container .header .header_about .header_cont:hover .header_inactive {
   background: rgba(127, 118, 231, 0.05);
-}
-
-.header_link {
-  text-decoration: none;
-}
-
-.radio_header {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .header_hover {

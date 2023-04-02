@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #f7f7f7;
+    background:  rgb(239, 239, 241);
     .header {
         z-index: 15;
         position: fixed;
@@ -32,17 +32,6 @@
             }
         }
     }
-}
-
-.header_link {
-    text-decoration: none;
-    // &:hover .header_inactive{
-    //     background: $back1;
-    // }
-}
-
-.radio_header {
-    appearance: none;
 }
 
 .header_hover{
