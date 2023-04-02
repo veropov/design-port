@@ -1,7 +1,7 @@
 import '../style/main.css';
 import { ClassArea } from '../components/area/job area/job-area';
 import { InArea } from '../components/area/info area/info-area';
-import  Header from '../header';
+import  Header from './header';
 import { Banner } from '../components/banner/banner';
 
 import Avatar from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg';

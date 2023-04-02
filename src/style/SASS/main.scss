@@ -36,6 +36,15 @@ $typo_color: #333333;
     background-color: $back1;
 }
 
+.container_preloader {
+    display: flex;
+    justify-content: center;
+}
+
+.sub_container_preloader {
+    width: 26px;
+}
+
 @import './index.scss';
 @import './header.scss';
 @import './job-area.scss';

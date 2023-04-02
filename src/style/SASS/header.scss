@@ -25,7 +25,10 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 5px;
+                cursor: pointer;
+                &:hover .header_inactive{
+                    background: $back1;
+                }
             }
         }
     }
@@ -48,9 +51,11 @@
     justify-content: center;
     align-items: center;
     width: 60px;
-    height: 50px;
+    height: 45px;
     border-radius: 16px;
     background: $back1;
+    margin-bottom: 5px;
+    transition: linear 0.1s;
 }
 
 
@@ -59,10 +64,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 50px;
     border-radius: 16px;
+    width: 60px;
+    height: 45px;
     background: $back2;
+    margin-bottom: 5px;
+    transition: linear 0.1s;
 }
 
 .header_inactive{
@@ -70,7 +77,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 50px;
     border-radius: 16px;
+    width: 60px;
+    height: 45px;
+    margin-bottom: 5px;
+    transition: 0.05s;
+}
+
+.lottie_home{
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    padding: 11px;
+    padding-top: 6px;
+    border-radius: 16px;
+    z-index: -1;
+    object-fit: contain;
+}
+
+.svg_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
