@@ -29,12 +29,15 @@ const [head, setHead] = useState({
 
 //Функция активации каждого элемента внутри Map head по индексу
 function toggleHeader(index: any) {
-    return setHead({...head, active: head.objects[index] as any})
+    return setHead({...head, active: head.objects[index] as any, hover: null})
  }
 
  //Функция активации каждого элемента внутри Map head по индексу
 function hoverHeader(index: any) {
-    return setHead({...head, hover: head.objects[index] as any})
+    if (head.objects[index] === head.active) {
+        return null
+    }
+    else return setHead({...head, hover: head.objects[index] as any})
  }
  
 //Функция дизактивации
@@ -62,7 +65,7 @@ function lottieHeaderActive(index: any) {
          return (
              lottieHome()
          ) 
-     }
+     } else return null
  }
 
 //Функция изменения цвета иконок, возвращает стили в header.scss 
@@ -89,6 +92,42 @@ const titleHeader = [
     'UI',
     'IT',
     'Контакты'
+]
+
+function ImgHeader(index: any) {
+    if (head.objects[index] === head.active) {
+        return imgBold[index]
+    } else {
+        return imgHeader[index]
+    }
+}
+
+const imgBold = [
+    (<svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.6747 13.5375V25.3625H2.32471V13.5375" fill="#333333"/>
+        <path d="M0.174805 12.4625V11.3875L11.9998 0.637512L23.8248 11.3875V12.4625" fill="#333333"/>
+        <path d="M15.2249 12.4625H8.7749V19.9875H15.2249V12.4625Z" fill="#E2E1F7"/>
+    </svg>),
+    (<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.775 17.6812L0.6875 25.3125L8.31875 24.225L24.9937 7.55C25.4187 7.125 25.4187 6.43125 24.9937 6.00625L19.9937 1.00625C19.5687 0.58125 18.875 0.58125 18.45 1.00625L1.775 17.6812Z" fill="#333333"/>
+        <path d="M9.4126 16.5875L22.4938 3.50626" stroke="#E2E1F7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.7749 17.6812L8.31865 24.225" stroke="#E2E1F7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>),
+    (<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.56895 15.8437C6.7002 15.4062 5.66895 15.2937 4.73145 15.6C3.75645 15.9187 2.9627 16.6937 2.5877 17.65C2.2752 18.4375 2.28145 19.2937 2.2627 20.125C2.2377 20.9562 2.1627 21.8 1.71895 22.525C1.59395 22.725 1.4502 22.9125 1.2877 23.0812C1.19395 23.175 1.1002 23.2687 1.0002 23.35C0.981448 23.3687 0.837698 23.4687 0.843948 23.4812C0.850198 23.4937 0.912698 23.5125 0.925198 23.5125C0.987698 23.5375 1.0502 23.5562 1.1127 23.575C1.64395 23.7312 2.19395 23.825 2.74395 23.8812C3.58145 23.9625 4.4377 23.9312 5.2627 23.7625C6.2502 23.5625 7.1877 23.15 7.9877 22.5312C8.20645 22.3625 8.41895 22.175 8.6127 21.9812C9.4127 21.1812 9.7752 20.0062 9.6627 18.8875C9.61895 18.4562 9.50645 18.0375 9.3252 17.6562" fill="#333333"/>
+        <path d="M11.0004 16.7438C17.0254 13.5 26.3066 1.43751 25.0379 0.168756C23.9504 -0.918744 11.7066 8.18126 8.46289 14.2063" fill="#333333"/>
+        <path d="M4.98135 17.3687C4.53135 17.6437 4.1876 18.0687 4.0126 18.575C3.85635 19.0312 3.8501 19.525 3.8626 20.0187" stroke="#E2E1F7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>),
+    (<svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke={titleHeaderHover(index[3])}>
+        <path d="M11.2251 3.3125L1.9876 12.6812C1.8876 12.7812 1.8876 12.95 1.9876 13.0562L11.3626 22.625" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.85 3.3125L26.0938 12.6812C26.1938 12.7812 26.1938 12.95 26.0938 13.0562L16.7188 22.625" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>),
+    (<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.2123 23.8812L24.8811 2.15C25.1248 1.2125 24.1436 0.431247 23.2873 0.881247L1.55608 12.2187C0.799834 12.6125 0.749834 13.6812 1.46858 14.1437L17.5311 24.5375C18.1686 24.95 19.0248 24.6187 19.2123 23.8812Z" fill="#333333" stroke="#333333" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.2437 22.0312L8.78125 25.375V18.6812" fill="#333333"/>
+        <path d="M13.2437 22.0312L8.78125 25.375V18.6812" stroke="#333333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.9375 18.6L19.9375 6.41251" stroke="#E2E1F7" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>)
 ]
 
 const imgHeader = [
@@ -135,7 +174,7 @@ const imgHeader = [
                     >
                         <div className={toggleHeaderHover(index)}>
                             <div className='svg_head'>
-                                {imgHeader[index]}
+                                {ImgHeader(index)}
                             </div>
                             {lottieHeaderActive(index)}
                         </div>
