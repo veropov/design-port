@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import  Lottie from "lottie-react";
+
+import Lottie from "lottie-react";
 import anHome from '../components/lottie/animation/anim_test.json';
-import trans from '../components/lottie/animation/trans.json';
+import penHome from '../components/lottie/animation/pencil_anim.json';
+
 
 function Header() {
 
@@ -12,10 +14,23 @@ const backActive = 'header_active';
 const backHover = 'header_hover';
 const backInactive = 'header_inactive'
 
+const animBox = [
+    anHome,
+    penHome,
+    anHome,
+    penHome,
+    anHome
+]
+
 //Добавление Лотти анимации 
-function lottieHome() {
+function lottieHome(index: any) {
     return (
-        <div className="lottie_home"><Lottie loop={true} animationData={anHome}/></div>
+        <div className="lottie_home">
+            <Lottie 
+                loop={true} 
+                animationData={animBox[index]}
+            />
+        </div>
     )
 }
 
@@ -74,7 +89,7 @@ function toggleHeaderHover(index: any) {
 function lottieHeaderActive(index: any) {
      if (head.objects[index] === head.hover) {
          return (
-             lottieHome()
+             lottieHome(index)
          ) 
      } else return null
  }
@@ -173,23 +188,23 @@ const imgHeader = [
         <div className="header">
             <div className="header_about">
                 {head.objects.map((elements, index) => (
-                        <div 
-                            className='header_cont'
-                            key={index} 
-                            onClick={() => toggleHeader(index)}
-                            onMouseEnter={() => hoverHeader(index)}
-                            onMouseLeave={() => disToggleHeader()}
-                        >
-                            <div className={toggleHeaderHover(index)}>
-                                <div className='svg_head'>
-                                    {ImgHeader(index)}
-                                </div>
-                                {lottieHeaderActive(index)}
+                    <div 
+                        className='header_cont'
+                        key={index} 
+                        onClick={() => toggleHeader(index)}
+                        onMouseEnter={() => hoverHeader(index)}
+                        onMouseLeave={() => disToggleHeader()}
+                    >
+                        <div className={toggleHeaderHover(index)}>
+                            <div className='svg_head'>
+                                {ImgHeader(index)}
                             </div>
-                            <p className="header_p">
-                                {titleHeader[index]}
-                            </p>
+                            {lottieHeaderActive(index)}
                         </div>
+                        <p className="header_p">
+                            {titleHeader[index]}
+                        </p>
+                    </div>
                 ))}
             </div>
         </div> 

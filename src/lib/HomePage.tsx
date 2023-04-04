@@ -16,7 +16,7 @@ import Html from '../style/assets/html.svg';
 import Css from '../style/assets/css.svg';
 import Js from '../style/assets/js.svg';
 import Flutter from '../style/assets/flutter.svg';
-import Comm from '../style/assets/img/commer.jpg';
+
 import BannerImg from '../style/assets/img/mask.png';
 
 
@@ -24,7 +24,7 @@ import Work from '../style/assets/icons/Work.svg';
 import Profile from '../style/assets/icons/Profile.svg';
 import Location from '../style/assets/icons/Location.svg';
 import Message from '../style/assets/icons/Message.svg';
-import { PrArea } from '../components/area/project area/projects-area';
+import  PrArea  from '../components/area/project area/projects-area';
 
 function HomePage() {
 
@@ -86,25 +86,6 @@ function HomePage() {
         Message
     )
 
-/*
-////////////////////////////////////
-////////////////////////////////////
-Информация о коммерческих и пет-проектах
-////////////////////////////////////
-////////////////////////////////////
-*/
-
-const commProj = new PrArea(
-    'Коммерческие проекты',
-    'B2b сервисы для агентов (FUN&SUN). Кроссплатформенные приложения для страхования (BAT IT). UI-компоненты на JS, dart',
-    Comm
-)
-
-const petProj = new PrArea(
-    'Пет-проекты',
-    'Альтернативный user flow VK, Сбер, МТС. CJM, глубинное интервью. Разработка приложения для фитнеса и сайта мед услуг.',
-    Comm
-)
 
 /*
 ////////////////////////////////////
@@ -128,25 +109,27 @@ const banner = new Banner(
         <div className="main">
             <div className="container_main-1">
                 { banner.BannerDots() }
-                <div className="about_me">
-                    <div className="person_main">
-                        <div className="container_person-inf">
-                            <div className="photo">
-                                <img className="img_person" src={Avatar}/>
+                <div className="sub_cont">
+                    <p className='title_cont'>Обо мне</p>
+                    <div className="about_me">
+                        <div className="person_main">
+                            <div className="container_person-inf">
+                                <div className="photo">
+                                    <img className="img_person" src={Avatar}/>
+                                </div>
+                                <div className="container_person-2">
+                                    { workInfo.InfoArea() }
+                                    { profileInfo.InfoArea() }
+                                    { locationInfo.InfoArea() }
+                                    { messageInfo.InfoArea() }
+                                </div>
                             </div>
-                            <div className="container_person-2">
-                                { workInfo.InfoArea() }
-                                { profileInfo.InfoArea() }
-                                { locationInfo.InfoArea() }
-                                { messageInfo.InfoArea() }
-                            </div>
+                                <div className="container_person-job">
+                                    { funJob.JobArea() }
+                                    { batJob.JobArea() }
+                                    { novaJob.JobArea() }
+                                </div>
                         </div>
-                            <div className="container_person-job">
-                                { funJob.JobArea() }
-                                { batJob.JobArea() }
-                                { novaJob.JobArea() }
-                            </div>
-                    </div>
                     <div className="info_main">
                         <div className="container_info-1">
                             <p className="info_p">Привет! Мой общий опыт работы дизайнером 3 года. Один год на позиции дизайнера интерфейсов. Я люблю работать в команде, 
@@ -193,9 +176,10 @@ const banner = new Banner(
                         </div>
                     </div>
                 </div>
-                <div className="portfolio_main">
-                    { commProj.ProjArea() }
-                    { petProj.ProjArea() }
+                </div>
+                <div className="sub_cont">
+                    <p className='title_cont'>Последние работы</p>
+                    <PrArea />
                 </div>
             </div>
         </div>
