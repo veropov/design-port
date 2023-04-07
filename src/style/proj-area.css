@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 .proj_area:hover {
-  transform: translateY(0px);
+  transform: translateY(-8px);
 }
 .proj_area img {
   border-radius: 16px;

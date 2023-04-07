@@ -47,8 +47,6 @@ import trans from './mm.json';
                     autoPlay={true}
                     loop={false} 
                     animationData={trans}
-                    
-                    
                 />
             </div>
         )
@@ -61,7 +59,6 @@ import trans from './mm.json';
                     className="proj_area" 
                     onMouseEnter={() => toggleHover(index)}
                     onMouseLeave={() => toggleDisHover()}
-
                 >
                     <div className="proj_cont">
                         <p className="title_proj">{title[index]}</p>

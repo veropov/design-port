@@ -3,6 +3,7 @@ import { ClassArea } from '../components/area/job area/job-area';
 import { InArea } from '../components/area/info area/info-area';
 import  Header from './header';
 import { Banner } from '../components/banner/banner';
+import Projects from '../lib/projects';
 
 import Avatar from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg';
 import FunSun from '../style/assets/fun sun.svg';
@@ -181,6 +182,7 @@ const banner = new Banner(
                     <p className='title_cont'>Последние работы</p>
                     <PrArea />
                 </div>
+                < Projects />
             </div>
         </div>
     </div>
