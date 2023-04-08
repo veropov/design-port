@@ -26,6 +26,8 @@ import Profile from '../style/assets/icons/Profile.svg';
 import Location from '../style/assets/icons/Location.svg';
 import Message from '../style/assets/icons/Message.svg';
 import  PrArea  from '../components/area/project area/projects-area';
+import MainProject from '../lib/projects';
+import { title } from 'process';
 
 function HomePage() {
 
@@ -182,7 +184,14 @@ const banner = new Banner(
                     <p className='title_cont'>Последние работы</p>
                     <PrArea />
                 </div>
-                < Projects />
+                <div className="project_container">
+                    { MainProject('Smart drive', 'bla-bla', 'comm', true) }
+                    { MainProject('Smart drive', 'bla-bla', 'comm', true) }
+                </div>
+                <div className="project_container">
+                    { MainProject('Smart drive', 'bla-bla', 'pet', false) }
+                    { MainProject('Smart drive', 'bla-bla', 'comm', true) }
+                </div>
             </div>
         </div>
     </div>

@@ -490,6 +490,26 @@
   border-radius: 60px;
   font-size: 12px;
   cursor: pointer;
+  transition: linear 0.15s;
+}
+.project_container .cont_head_project .head_project .title_project .type_project:hover {
+  background: #f17979;
+}
+.project_container .cont_head_project .head_project .title_project .type_project_false {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 26px;
+  background: #a3eeaf;
+  border-radius: 60px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: linear 0.15s;
+}
+.project_container .cont_head_project .head_project .title_project .type_project_false:hover {
+  background: #50e068;
 }
 .project_container .cont_head_project .head_project .proj_subTitle {
   font-style: normal;
@@ -547,18 +567,53 @@
   height: 76px;
   background: rgba(127, 118, 231, 0.05);
   border-radius: 16px;
+  cursor: pointer;
+  transition: linear 0.1s;
 }
-.feat_main .feat_container .feat_project .feat {
+.feat_main .feat_container .feat_project:hover {
+  background: rgba(127, 118, 231, 0.2);
+}
+
+.feat {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0px;
   gap: 15px;
 }
-.feat_main .feat_container .feat_project .feat p {
+.feat p {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 110%;
+}
+
+.feat_active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.feat_active p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+  margin-left: 41px;
+}
+
+.lottie_project {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-right: 38px;
+  width: 44px;
+}
+
+.svg_active_proj {
+  display: none;
+}
+
+.svg_inactive_proj {
+  display: block;
 }

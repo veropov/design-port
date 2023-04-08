@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Comm from '../project area/commer.jpg';
 import Lottie from "lottie-react";
-import trans from './mm.json';
+import trans from './trans_test.json';
 
 
     function ProjArea() {

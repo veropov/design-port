@@ -45,6 +45,26 @@
                     border-radius: 60px;
                     font-size: 12px;
                     cursor: pointer;
+                    transition: linear .15s;
+                    &:hover {
+                        background: #f17979;
+                    }
+                }
+                .type_project_false {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60px;
+                    height: 26px;
+                    background: #a3eeaf;
+                    border-radius: 60px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    transition: linear .15s;
+                    &:hover {
+                        background: #50e068;
+                    }
                 }
             }
             .proj_subTitle {
@@ -105,22 +125,55 @@
             height: 76px;
             background: $back1;
             border-radius: 16px;
-            .feat {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 0px;
-                gap: 15px;
-                p {
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 110%;
-                }
+            cursor: pointer;
+            transition: linear .1s;
+            &:hover {
+                background: $back2;
             }
-
         }
     }
 }
 
+.feat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 110%;
+    }
+}
+
+.feat_active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 110%;
+        margin-left: 41px;
+    }
+}
+
+.lottie_project{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-right: 38px;
+    width: 44px;
+}
+
+.svg_active_proj {
+    display: none;
+}
+
+.svg_inactive_proj {
+    display: block;
+}
