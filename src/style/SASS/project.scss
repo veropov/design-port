@@ -228,3 +228,16 @@
     font-size: 12px;
 }
 
+.modal_anim {
+    position: absolute;
+    z-index: 100;
+    width: 320px;
+    transform: translate(134px, -84px);
+}
+
+.modal_dis_anim {
+    position: absolute;
+    z-index: 10;
+    width: 320px;
+    transform: translate(134px, -92px);
+}

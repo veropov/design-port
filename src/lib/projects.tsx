@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import Delayed from './Delayed';
 
-import anHome from '../components/lottie/animation/anim_test.json';
+import modalProj from '../components/lottie/animation/modal.json';
 import penHome from '../components/lottie/animation/pencil_anim.json';
 import {Button} from '../components/button/button';
 
@@ -117,19 +117,26 @@ export default function MainProject(title: String, subTitle: String, type: Strin
 
     const [typePr, setType] = useState(false)
     const [typeActive, setTypeActive] = useState(false)
+    const [typeDis, setTypeDis] = useState(false)
 
     //Функция на изменение хука typeActive
     function typeActiveModal() {
         return setTypeActive(!typeActive)
      }
 
+     function modalDisActive() {
+        return setTypeDis(!typeDis)
+     }
+
     function modalAnimation() {
         return (
-            <div>
-                <Lottie animationData={animBox[0]} loop={false}/>
+            <div className={typeDis ? "modal_dis_anim" : "modal_anim"}>
+                <Lottie animationData={modalProj} loop={false} />
             </div>
         )
     }
+
+
 
 
     //Функциональный компонент Модал окна
@@ -159,16 +166,23 @@ export default function MainProject(title: String, subTitle: String, type: Strin
     }
 
     //Таймер на появление модал окна
-    const Timer = () => {
+    function Timer() {
         const timerRef = useRef(null as any);
 
         // таймер срабатывает по клику
         // возвращает функцию typeChange
-        const startTimer = () => {
+        function startTimer() {
             timerRef.current = setTimeout(() => {
                 typeChange()
-            }, 600);
+            }, 300);
         }
+
+        function disTimer() {
+            timerRef.current = setTimeout(() => {
+                modalDisActive()
+            }, 450);
+        }
+
 
         return (
             <div 
@@ -176,6 +190,7 @@ export default function MainProject(title: String, subTitle: String, type: Strin
                 onClick={function() {
                     startTimer();
                     typeActiveModal();
+                    disTimer();
                 }}
             >{type}</div>
         )

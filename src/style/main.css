@@ -650,6 +650,7 @@
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
+  transition: linear 0.15s;
 }
 .modal_proj .title_modal_proj {
   background: #FFFFFF;
@@ -681,4 +682,18 @@
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
+}
+
+.modal_anim {
+  position: absolute;
+  z-index: 100;
+  width: 320px;
+  transform: translate(134px, -84px);
+}
+
+.modal_dis_anim {
+  position: absolute;
+  z-index: 10;
+  width: 320px;
+  transform: translate(134px, -92px);
 }
