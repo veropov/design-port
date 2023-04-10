@@ -1,6 +1,9 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import Delayed from './Delayed';
+
 import anHome from '../components/lottie/animation/anim_test.json';
 import penHome from '../components/lottie/animation/pencil_anim.json';
+import {Button} from '../components/button/button';
 
 import Lo from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg'
 import  Lottie  from "lottie-react";
@@ -15,6 +18,12 @@ export default function MainProject(title: String, subTitle: String, type: Strin
         1,
         2
     ]
+
+    const buttonProj = new Button(
+        'Закрыть',
+        'title_button_proj',
+        'button_proj',
+    )
 
     const animBox = [
         penHome,
@@ -102,15 +111,96 @@ export default function MainProject(title: String, subTitle: String, type: Strin
         'IT'
     ]
 
-    //
+    //Асинхронная функция появление модал окна
+    //Асинхронная функция появление модал окна
+    //Асинхронная функция появление модал окна
 
+    const [typePr, setType] = useState(false)
+    const [typeActive, setTypeActive] = useState(false)
+
+    //Функция на изменение хука typeActive
+    function typeActiveModal() {
+        return setTypeActive(!typeActive)
+     }
+
+    function modalAnimation() {
+        return (
+            <div>
+                <Lottie animationData={animBox[0]} loop={false}/>
+            </div>
+        )
+    }
+
+
+    //Функциональный компонент Модал окна
+    function ModalProject() {
+        if (typeBool === true) { 
+            return (
+                <div className="modal_proj">
+                    <div className="title_modal_proj">
+                        <p>Коммерческие проекты под защитой NDA. В моем портфолио работы представлены приближенной копией.</p>
+                    </div>
+                        { buttonProj.Button() }
+                </div>
+            )
+        } else return (
+            <div className="modal_proj">
+                <div className="title_modal_proj">
+                    <p>Коммерческие проекты под защитой NDA. В моем портфолио работы представлены приближенной копией.</p>
+                </div>
+                    { buttonProj.Button() }
+            </div>
+        ) 
+    }
+
+    //Функция на изменение хук typePr
+    function typeChange() {
+       return setType(!typePr)
+    }
+
+    //Таймер на появление модал окна
+    const Timer = () => {
+        const timerRef = useRef(null as any);
+
+        // таймер срабатывает по клику
+        // возвращает функцию typeChange
+        const startTimer = () => {
+            timerRef.current = setTimeout(() => {
+                typeChange()
+            }, 600);
+        }
+
+        return (
+            <div 
+                className={ typeB() }
+                onClick={function() {
+                    startTimer();
+                    typeActiveModal();
+                }}
+            >{type}</div>
+        )
+    }
+
+function loadModal() {
+    return typePr ? ModalProject() : null
+}
+
+const aaa = {
+    zIndex: 10
+}
+
+function loadModalActive() {
+    return typeActive ? modalAnimation() : null
+}
 
     return (
         <div className="cont_head_project">
+            { loadModalActive() }
+            { loadModal() }
             <div className="head_project">
                 <div className="title_project">
                     <p>{title}</p>
-                    <div className={typeB() }>{type}</div>
+                    {Timer()}
                 </div>
                 <p className='proj_subTitle'>{subTitle}</p>
             </div>

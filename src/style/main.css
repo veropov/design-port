@@ -432,11 +432,28 @@
   gap: 25px;
   z-index: 10;
 }
-.container_banner .frame_banner p {
+.container_banner .frame_banner .p_banner {
   font-weight: 500;
   font-size: 58px;
   line-height: 110%;
   text-align: center;
+}
+
+.button_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 36px;
+  background: #5C59FF;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.title_button_banner {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .project_container {
@@ -490,7 +507,7 @@
   border-radius: 60px;
   font-size: 12px;
   cursor: pointer;
-  transition: linear 0.15s;
+  transition: linear 0.1s;
 }
 .project_container .cont_head_project .head_project .title_project .type_project:hover {
   background: #f17979;
@@ -506,7 +523,7 @@
   border-radius: 60px;
   font-size: 12px;
   cursor: pointer;
-  transition: linear 0.15s;
+  transition: linear 0.1s;
 }
 .project_container .cont_head_project .head_project .title_project .type_project_false:hover {
   background: #50e068;
@@ -616,4 +633,52 @@
 
 .svg_inactive_proj {
   display: block;
+}
+
+.modal_proj {
+  position: absolute;
+  transform: translate(134px, -92px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+  padding: 15px;
+  gap: 15px;
+  width: 320px;
+  border-radius: 16px;
+  background: rgba(255, 128, 128, 0.7);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+.modal_proj .title_modal_proj {
+  background: #FFFFFF;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+}
+.modal_proj .title_modal_proj p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.button_proj {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 18px;
+  background: #5552FF;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.title_button_proj {
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
 }

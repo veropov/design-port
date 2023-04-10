@@ -3,8 +3,8 @@ import {Button} from '../button/button';
 
 const button = new Button(
     'Посмотреть работы',
-    '',
-    true
+    'title_button_banner',
+    'button_banner'
 )
 
 export class Banner {
@@ -22,7 +22,7 @@ export class Banner {
         return (
             <div className="container_banner">
                 <div className="frame_banner">
-                    <p>{this.title}<br />{this.subTitle}</p>
+                    <p className='p_banner'>{this.title}<br />{this.subTitle}</p>
                     { button.Button() }
                 </div>
                 <img src={`${this.image}`}/>

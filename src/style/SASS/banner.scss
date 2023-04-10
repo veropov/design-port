@@ -25,11 +25,28 @@
         padding: 30px;
         gap: 25px;
         z-index: 10;
-        p{
+        .p_banner{
             font-weight: 500;
             font-size: 58px;
             line-height: 110%;
             text-align: center;
         }
     }
+}
+
+.button_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 36px;
+    background: #5C59FF;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.title_button_banner {
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
 }
