@@ -15,7 +15,9 @@ export class Button {
 
     Button() {
         return (
-            <div className={this.nameBack}>
+            <div 
+            className={this.nameBack}
+            >
                 <p className={this.nameTitle}>{this.title}</p>
             </div>
         )

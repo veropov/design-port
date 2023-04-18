@@ -185,12 +185,13 @@ const banner = new Banner(
                     <PrArea />
                 </div>
                 <div className="project_container">
-                    { MainProject('Smart drive', 'bla-bla', 'comm', true) }
-                    { MainProject('Smart drive', 'bla-bla', 'comm', true) }
+                    { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, true, true) }
+                    { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', false, true, false, false, true, true) }
+                    { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, false, true) }
                 </div>
                 <div className="project_container">
-                    { MainProject('Smart drive', 'bla-bla', 'pet', false) }
-                    { MainProject('Smart drive', 'bla-bla', 'comm', true) }
+                { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, true, true) }
+                { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', false, true, true, true, true, true) }
                 </div>
             </div>
         </div>
