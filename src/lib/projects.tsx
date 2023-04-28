@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import Delayed from './Delayed';
-
 import modalProj from '../components/lottie/animation/modal.json';
 import penHome from '../components/lottie/animation/pencil_anim.json';
 import {Button} from '../components/button/button';
@@ -9,6 +7,15 @@ import Lo from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxj
 import  Lottie  from "lottie-react";
 
 export default function MainProject(title: String, subTitle: String, type: String, typeBool: boolean, gitHub: boolean, figma: boolean, ux: boolean, ui: boolean, it: boolean) {
+
+
+    //Кнопка
+    const buttonMainProj = new Button(
+        'Посмотреть',
+        'title_button_main_proj',
+        'button_main_proj'
+    );
+
 
     function typeB() {
         if (typeBool === true) {
@@ -237,6 +244,7 @@ export default function MainProject(title: String, subTitle: String, type: Strin
                     <img src={Lo}/>
                 </div>
             </div>
+            {buttonMainProj.Button()}
         </div>
     )
 }

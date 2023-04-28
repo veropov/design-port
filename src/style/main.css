@@ -469,7 +469,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px;
   gap: 15px;
   background: #FFFFFF;
@@ -717,4 +717,26 @@
   z-index: 10;
   width: 320px;
   transform: translate(134px, -92px);
+}
+
+.button_main_proj {
+  width: 340px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5552FF;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: linear 0.1s;
+}
+.button_main_proj:hover {
+  background: #2725c9;
+}
+
+.title_button_main_proj {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
 }
