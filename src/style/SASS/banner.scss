@@ -2,19 +2,19 @@
     background: radial-gradient(74.08% 1695.93% at 12.04% 80.92%, rgba(175, 193, 255, 0.2) 0%, rgba(112, 0, 255, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(86.99deg, #BAC5FF 0.2%, #EFCDFF 99.48%);
     border-radius: 16px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     height: 400px;
     overflow: hidden;
     z-index: 1;
     img {
-        max-width: 1620px;
+        max-width: 1640px;
         object-fit: cover;
         position: relative;
         z-index: 2;
-        transform: translate(-250px, -404px);
+        transform: translate(-4px, -404px);
     }
     .frame_banner {
-        max-width: 1220px;
+        max-width: 1600px;
         object-fit: cover;
         position: relative;
         display: flex;
@@ -42,6 +42,10 @@
     background: #5C59FF;
     border-radius: 99px;
     cursor: pointer;
+    transition: linear .1s;
+    &:hover {
+        background: #2725c9;
+    }
 }
 
 .title_button_banner {

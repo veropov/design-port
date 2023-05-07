@@ -184,15 +184,6 @@ const banner = new Banner(
                     <p className='title_cont'>Последние работы</p>
                     <PrArea />
                 </div>
-                <div className="project_container">
-                    { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, true, true) }
-                    { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', false, true, false, false, true, true) }
-                    { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, false, true) }
-                </div>
-                <div className="project_container">
-                { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, true, true) }
-                { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', false, true, true, true, true, true) }
-                </div>
             </div>
         </div>
     </div>

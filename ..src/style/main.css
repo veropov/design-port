@@ -211,9 +211,6 @@
   align-items: center;
   width: 460px;
 }
-.container .header .header_about a {
-  text-decoration: none;
-}
 .container .header .header_about .header_cont {
   display: flex;
   flex-direction: column;
@@ -408,21 +405,21 @@
   background: radial-gradient(74.08% 1695.93% at 12.04% 80.92%, rgba(175, 193, 255, 0.2) 0%, rgba(112, 0, 255, 0.2) 100%), linear-gradient(86.99deg, #BAC5FF 0.2%, #EFCDFF 99.48%);
   border-radius: 16px;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   height: 400px;
   overflow: hidden;
   z-index: 1;
 }
 .container_banner img {
-  max-width: 1640px;
+  max-width: 1620px;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
   z-index: 2;
-  transform: translate(-4px, -404px);
+  transform: translate(-250px, -404px);
 }
 .container_banner .frame_banner {
-  max-width: 1600px;
+  max-width: 1220px;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
@@ -450,7 +447,6 @@
   background: #5C59FF;
   border-radius: 99px;
   cursor: pointer;
-  transition: linear 0.1s;
 }
 .button_banner:hover {
   background: #2725c9;
@@ -464,7 +460,6 @@
 }
 
 .project_container {
-  margin-top: 150px;
   display: flex;
   flex-direction: row;
   justify-content: center;
