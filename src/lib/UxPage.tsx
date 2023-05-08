@@ -1,6 +1,13 @@
+import { Banner } from '../components/banner/banner';
 import '../style/main.css';
 import Header from "./header";
 import MainProject from "./projects";
+
+const banner = new Banner(
+    'Вячеслав Еропов',
+    'Дизайнер интерфейсов',
+    ''
+)
 
 
 export default function UxPage() {
