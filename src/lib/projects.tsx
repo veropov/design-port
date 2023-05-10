@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from "react"
 import modalProj from '../components/lottie/animation/modal.json';
-import penHome from '../components/lottie/animation/pencil_anim.json';
+import modalProjPet from '../components/lottie/animation/modal_pet.json';
 import {Button} from '../components/button/button';
 
 import Lo from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg'
 import  Lottie  from "lottie-react";
 
-export default function MainProject(title: String, subTitle: String, type: String, typeBool: boolean, gitHub: boolean, figma: boolean, ux: boolean, ui: boolean, it: boolean) {
+export default function MainProject(title: String, subTitle: String, type: String, typeBool: boolean, gitHub: boolean, figma: boolean, ux: boolean, ui: boolean, it: boolean, link: string) {
 
 
     //Кнопка
     const buttonMainProj = new Button(
-        'Посмотреть',
+        'Перейти к фигме',
         'title_button_main_proj',
         'button_main_proj'
     );
@@ -95,7 +95,7 @@ export default function MainProject(title: String, subTitle: String, type: Strin
             )
         } else return (
             <div className={typeDis ? "modal_dis_anim" : "modal_anim"}>
-                <Lottie animationData={penHome} loop={false} />
+                <Lottie animationData={modalProjPet} loop={false} />
             </div>
         )
     }
@@ -244,7 +244,7 @@ export default function MainProject(title: String, subTitle: String, type: Strin
                     <img src={Lo}/>
                 </div>
             </div>
-            {buttonMainProj.Button()}
+            <a href={link}>{buttonMainProj.Button()}</a>
         </div>
     )
 }

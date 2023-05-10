@@ -1,0 +1,71 @@
+.container_banner_ux {
+    background: radial-gradient(57.17% 57.17% at 66.03% 64.61%, #5667FF 0%, #FFD0FA 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background-blend-mode: darken;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1600px;
+    height: 400px;
+    z-index: 1;
+    .frame_banner_ux {
+        max-width: 1600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        padding: 30px;
+        gap: 25px;
+        .img_ux_1 {
+            position: relative;
+            max-width: 480px;
+            margin-top: 15px;
+            z-index: 20;
+        }
+        .img_ux_2 {
+            position: relative;
+            max-width: 560px;
+            z-index: 20;
+        }
+        .p_banner_ux{
+            font-weight: 500;
+            font-size: 140px;
+            line-height: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.about_project {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #FFFFFF;
+    border-radius: 16px;
+    gap: 25px;
+    .about_project_m{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 30px;
+        gap: 25px;
+        width: 1200px;
+        .cont_project_m {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            .bold_p {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 130%;
+            }
+            .info_proj_m {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 130%;
+            }
+        }
+    }
+}
