@@ -11,7 +11,7 @@ export default function MainProject(title: String, subTitle: String, type: Strin
 
     //Кнопка
     const buttonMainProj = new Button(
-        'Перейти к фигме',
+        'Посмотреть',
         'title_button_main_proj',
         'button_main_proj'
     );

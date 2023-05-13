@@ -1,3 +1,5 @@
+
+
 .main {
     margin-top: 110px;
     width: 1200px;
@@ -77,6 +79,86 @@
     }
 }
 
+@media only screen and (max-width: 420px) {
+    .main {
+        margin-top: 110px;
+        width: 420px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .title_main {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 110%;
+            margin-bottom: 25px;
+        }
+        .container_main-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            gap: 40px;
+            .sub_cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                .title_cont {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 130%;
+                }
+                .about_me {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: #FFFFFF;
+                    border-radius: 14px;
+                    .person_main {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 30px;
+                        gap: 25px;
+                        width: 340px;
+                        height: 910px;
+                    }
+                    .info_main {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 30px;
+                        width: 340px;
+                        height: 1160px;
+                        background: #FFFFFF;
+                        border-radius: 16px;
+                        .container_info-1 {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+    
+                            padding: 0px;
+                            gap: 10px;
+                            .info_p {
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 130%;
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
 
 .container_info-2 {
     display: flex;
@@ -97,7 +179,6 @@
             align-items: center;
             padding: 0px;
             width: 584px;
-            height: 26px;
         }
         .container_info-dsgn-2 {
             display: flex;
@@ -122,6 +203,55 @@
         }
     }
 }
+
+@media only screen and (max-width: 420px){
+    .container_info-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 15px;
+        .container_info-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 15px;
+            .container_info-dsgn {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px;
+                width: 340px;
+                height: 200px;
+            }
+            .container_info-dsgn-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px;
+                width: 340px;
+                height: 220px;
+            }
+            .container_info-attr {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                background: $back1;
+                border-radius: 16px;
+                width: 260px;
+                .info_p {
+                    @include main_type;
+                }
+            }
+        }
+    }
+}
+
 
 .link {
     text-decoration: none;
