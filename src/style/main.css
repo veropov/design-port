@@ -48,7 +48,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   gap: 10px;
+  width: 1200px;
+}
+.main .container_main-1 .sub_cont .projectPage {
+  width: 1200px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 .main .container_main-1 .sub_cont .title_cont {
   font-family: "Jost";
@@ -125,8 +134,17 @@
   .main .container_main-1 .sub_cont {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     gap: 10px;
+    width: 340px;
+  }
+  .main .container_main-1 .sub_cont .projectPage {
+    width: 340px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
   }
   .main .container_main-1 .sub_cont .title_cont {
     font-family: "Jost";
@@ -557,6 +575,9 @@
   align-items: center;
   gap: 25px;
 }
+.portfolio_main a {
+  text-decoration: none;
+}
 
 .proj_area {
   display: flex;
@@ -665,6 +686,9 @@
   height: 400px;
   overflow: hidden;
   z-index: 1;
+}
+.container_banner a {
+  text-decoration: none;
 }
 .container_banner img {
   max-width: 1640px;
@@ -864,15 +888,37 @@
   padding: 0px;
   gap: 25px;
 }
-.foot_project .img_project {
+.foot_project .img_project_it {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  width: 340px;
+  height: 220px;
+  border-radius: 16px;
+  background: radial-gradient(60.29% 93.32% at 63.62% 56.26%, rgba(50, 230, 255, 0.6) 0%, rgba(205, 219, 255, 0.6) 100%);
+}
+.foot_project .img_project_it img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 2;
+  width: auto;
+  height: 60%;
+  border-radius: 16px;
+}
+.foot_project .img_project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   z-index: 1;
   width: 340px;
   height: 260px;
   border-radius: 16px;
+  background: #EFEFF4;
 }
 .foot_project .img_project img {
   -o-object-fit: cover;
@@ -880,7 +926,7 @@
   position: relative;
   z-index: 2;
   width: auto;
-  height: 250%;
+  height: 90%;
 }
 
 .feat_main {
@@ -1155,15 +1201,38 @@
     gap: 25px;
     width: 280px;
   }
-  .foot_project .img_project {
+  .foot_project .img_project_it {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     z-index: 1;
     width: 280px;
     height: 220px;
     border-radius: 16px;
+    background: radial-gradient(60.29% 93.32% at 63.62% 56.26%, rgba(50, 230, 255, 0.6) 0%, rgba(205, 219, 255, 0.6) 100%);
+  }
+  .foot_project .img_project_it img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+    z-index: 2;
+    width: auto;
+    height: 50%;
+    border-radius: 16px;
+  }
+  .foot_project .img_project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    width: 280px;
+    height: 220px;
+    border-radius: 16px;
+    background: #EFEFF4;
   }
   .foot_project .img_project img {
     -o-object-fit: cover;
@@ -1171,7 +1240,7 @@
     position: relative;
     z-index: 2;
     width: auto;
-    height: 250%;
+    height: 90%;
   }
   .feat_main {
     display: flex;

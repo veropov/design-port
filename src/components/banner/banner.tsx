@@ -2,7 +2,7 @@ import {Button} from '../button/button';
 
 
 const button = new Button(
-    'Посмотреть работы',
+    'Посмотреть все работы',
     'title_button_banner',
     'button_banner',
 )

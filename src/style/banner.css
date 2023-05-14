@@ -7,6 +7,9 @@
   overflow: hidden;
   z-index: 1;
 }
+.container_banner a {
+  text-decoration: none;
+}
 .container_banner img {
   max-width: 1640px;
   -o-object-fit: cover;

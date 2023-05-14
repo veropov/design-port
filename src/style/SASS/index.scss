@@ -25,7 +25,16 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            justify-content: center;
             gap: 10px;
+            width: 1200px;
+            .projectPage {
+                width: 1200px;
+                flex-wrap: wrap;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+            }
             .title_cont {
                 font-family: 'Jost';
                 font-style: normal;
@@ -104,8 +113,17 @@
             .sub_cont {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+                justify-content: center;
                 gap: 10px;
+                width: 340px;
+                .projectPage {
+                    width: 340px;
+                    flex-wrap: wrap;
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                }
                 .title_cont {
                     font-family: 'Jost';
                     font-style: normal;

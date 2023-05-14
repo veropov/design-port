@@ -3,7 +3,11 @@ import Header from "./header";
 import MainProject from "./projects";
 import UxLeftImg from '../style/assets/img/Group 277130449.png';
 import UxRightImg from '../style/assets/img/Group 277130450.png';
+import json from '../components/lottie/animation/cruise.json';
 
+import DartCode from '../style/assets/img/dart-code.png';
+import JSCode from '../style/assets/img/JS-code.png';
+import PHPtCode from '../style/assets/img/PHP-code.png';
 
 export default function ItPage() {
     return (
@@ -21,9 +25,9 @@ export default function ItPage() {
                     <div className="sub_cont">
                         <p className='title_cont'>Проекты</p>
                         <div className="project_container">
-                            { MainProject('Lottie анимация', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, false, false, false, true, 'https://www.figma.com/file/KqSP2KCkcgf5dmwGOheM7M/Smart-drive?type=design&node-id=293%3A564&t=jN8krBkmCu9Fss5J-1') }
-                            { MainProject('Сайт PHP, native JS', 'Разработка приложения с нуля, тестирование функционала, UX исследования', 'pet', false, true, false, false, false, true, 'https://www.figma.com/file/9mZkv8cZ3mMbVoNdgDGm6k/Port?type=design&node-id=0%3A1&t=mknrEsQoNr8OEwyb-1') }
-                            { MainProject('FitnestX', 'Оформление услуг в аэропорту, раздел обратной связи, поддержка NPS системы', 'pet', false, true, true, true, false, true, 'https://www.figma.com/file/SQvge574qM6tTgjtcWM1GJ/FUN%26SUN-projects?type=design&node-id=0%3A1&t=1YttjT2b5n2LNMkz-1') }
+                            { MainProject('Lottie анимация', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, false, false, false, true, 'https://github.com/veropov/Fun-Sun-anim', JSCode, true) }
+                            { MainProject('Сайт PHP, native JS', 'Разработка приложения с нуля, тестирование функционала, UX исследования', 'pet', false, true, false, false, false, true, 'https://github.com/veropov/Diagnostic_irk', PHPtCode, true) }
+                            { MainProject('FitnestX', 'Оформление услуг в аэропорту, раздел обратной связи, поддержка NPS системы', 'pet', false, true, true, true, false, true, 'https://github.com/veropov/Train', DartCode, true) }
                         </div>
                     </div>
                     <div className="sub_cont">

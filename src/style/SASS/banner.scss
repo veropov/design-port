@@ -6,6 +6,9 @@
     height: 400px;
     overflow: hidden;
     z-index: 1;
+    a {
+        text-decoration: none;
+    }
     img {
         max-width: 1640px;
         object-fit: cover;

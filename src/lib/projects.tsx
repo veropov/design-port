@@ -6,7 +6,7 @@ import {Button} from '../components/button/button';
 import Lo from '../style/assets/img/IeOXLE49ZsTul0kCRk8KHfn4JjhEKUii43Suk1bYoWxjHHt7-alhvY5yPZX4W6JSsU-dK6p3.jpg'
 import  Lottie  from "lottie-react";
 
-export default function MainProject(title: String, subTitle: String, type: String, typeBool: boolean, gitHub: boolean, figma: boolean, ux: boolean, ui: boolean, it: boolean, link: string) {
+export default function MainProject(title: String, subTitle: String, type: String, typeBool: boolean, gitHub: boolean, figma: boolean, ux: boolean, ui: boolean, it: boolean, link: string, img: string, itPage: boolean) {
 
 
     //Кнопка
@@ -240,8 +240,8 @@ export default function MainProject(title: String, subTitle: String, type: Strin
                 <p className='proj_subTitle'>{subTitle}</p>
             </div>
             <div className="foot_project">
-                <div className="img_project">
-                    <img src={Lo}/>
+                <div className={itPage ? "img_project_it" : "img_project"}>
+                    <img src={img}/>
                 </div>
             </div>
             <a href={link}>{buttonMainProj.Button()}</a>

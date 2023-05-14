@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import anHome from '../components/lottie/animation/anim_test.json';
 import penHome from '../components/lottie/animation/pencil_anim.json';
+import codeHome from '../components/lottie/animation/code_anim.json';
 import { NavLink } from "react-router-dom";
 
 
@@ -18,7 +19,7 @@ const backInactive = 'header_inactive'
 const animBox = [
     anHome,
     penHome,
-    anHome
+    codeHome
 ]
 
 const link = [

@@ -5,6 +5,10 @@ import UxLeftImg from '../style/assets/img/Group 277130446.png';
 import UxRightImg from '../style/assets/img/Group 277130445.png';
 import nps from '../style/assets/img/nps.png';
 
+import Smart from '../style/assets/img/Smart.jpg';
+import Baggage from '../style/assets/img/Baggage.jpg';
+import Fitnest from '../style/assets/img/FitnestX.jpg';
+
 
 export default function UxPage() {
     return (
@@ -22,9 +26,9 @@ export default function UxPage() {
                     <div className="sub_cont">
                         <p className='title_cont'>Проекты</p>
                         <div className="project_container">
-                            { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, true, true, 'https://www.figma.com/file/KqSP2KCkcgf5dmwGOheM7M/Smart-drive?type=design&node-id=293%3A564&t=jN8krBkmCu9Fss5J-1') }
-                            { MainProject('FUN&SUN project', 'Оформление услуг в аэропорту, раздел обратной связи, поддержка NPS системы', 'comm', true, true, true, true, true, false, 'https://www.figma.com/file/SQvge574qM6tTgjtcWM1GJ/FUN%26SUN-projects?type=design&node-id=0%3A1&t=1YttjT2b5n2LNMkz-1') }
-                            { MainProject('FitnestX', 'Разработка приложения с нуля, тестирование функционала, UX исследования', 'pet', false, true, false, false, true, true, 'https://www.figma.com/file/9mZkv8cZ3mMbVoNdgDGm6k/Port?type=design&node-id=0%3A1&t=mknrEsQoNr8OEwyb-1') }
+                            { MainProject('Smart drive', 'Приложение, которое позволяет сократить расходы на оформление ОСАГО', 'comm', true, true, true, true, true, true, 'https://www.figma.com/file/KqSP2KCkcgf5dmwGOheM7M/Smart-drive?type=design&node-id=293%3A564&t=jN8krBkmCu9Fss5J-1', Smart, false) }
+                            { MainProject('FUN&SUN project', 'Оформление услуг в аэропорту, раздел обратной связи, поддержка NPS системы', 'comm', true, true, true, true, true, false, 'https://www.figma.com/file/SQvge574qM6tTgjtcWM1GJ/FUN%26SUN-projects?type=design&node-id=0%3A1&t=1YttjT2b5n2LNMkz-1', Baggage, false) }
+                            { MainProject('FitnestX', 'Разработка приложения с нуля, тестирование функционала, UX исследования', 'pet', false, true, false, false, true, true, 'https://www.figma.com/file/9mZkv8cZ3mMbVoNdgDGm6k/Port?type=design&node-id=0%3A1&t=mknrEsQoNr8OEwyb-1', Fitnest, false) }
                         </div>
                     </div>
                     <div className="sub_cont">

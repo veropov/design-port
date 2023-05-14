@@ -5,6 +5,9 @@
   align-items: center;
   gap: 25px;
 }
+.portfolio_main a {
+  text-decoration: none;
+}
 
 .proj_area {
   display: flex;

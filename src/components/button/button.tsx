@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export class Button {
     title?: String;
     nameTitle?: string;
@@ -15,11 +17,11 @@ export class Button {
 
     Button() {
         return (
-            <div 
-            className={this.nameBack}
-            >
-                <p className={this.nameTitle}>{this.title}</p>
-            </div>
+            <NavLink to={'/project'}>
+                <div className={this.nameBack} >
+                    <p className={this.nameTitle}>{this.title}</p>
+                </div>
+            </NavLink>
         )
     }
 }
